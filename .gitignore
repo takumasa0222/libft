@@ -4,4 +4,3 @@ ft_bzero.c:Zone.Identifier
 *.vscode
 *.out
 *.a
-test_main.c
