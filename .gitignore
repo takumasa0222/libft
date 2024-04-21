@@ -1,0 +1,7 @@
+ft_bzero.c:Zone.Identifier
+*.Identifier
+*.o
+*.vscode
+*.out
+*.a
+test_main.c
