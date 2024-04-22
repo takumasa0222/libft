@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 17:00:57 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/04/22 06:00:53 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/04/22 22:10:27 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # include <ctype.h>
+# include <stdlib.h>
 
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
