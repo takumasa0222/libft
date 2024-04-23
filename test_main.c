@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:49:19 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/04/22 04:05:17 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/04/23 23:11:21 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 
 void	is_x_test(int (*origin)(int c), int (*ft_func)(int c), int *test, char *funcname)
-{\
+{
 	int	origin_res, ft_func_res;
 	printf("%s\n", funcname);
 	while (*test != 5555)
@@ -67,9 +67,9 @@ void	test_memset(void *(*origin)(void *ptr, int value, size_t num), void *(*ft_f
 		if (((char *)test)[i] == ((char *)test2)[i])
 			printf("result is same origin: %d, ft_func: %d\n", ((char *)test)[i],  ((char *)test2)[i]);
 		else
-			printf("\x1b[31mtest result is not same origin: %c, ft_func: %c\n\x1b[39m", ((char *)test)[i],  ((char *)test2)[i]);	
+			printf("\x1b[31mtest result is not same origin: %c, ft_func: %c\n\x1b[39m", ((char *)test)[i],  ((char *)test2)[i]);
 		i++;
-	} 
+	}
 	printf("\x1b[34mtest is completed\n\n\x1b[39m");
 }
 
@@ -88,7 +88,7 @@ void	test_bzero(void (*origin)(void *ptr, size_t num), void (*ft_func)(void *ptr
 		else
 			printf("\x1b[31mtest result is not same origin: %d, ft_func: %d\n\x1b[39m", ((char *)test)[i],  ((char *)test2)[i]);
 		i++;
-	} 
+	}
 	printf("\x1b[34mtest is completed\n\n\x1b[39m");
 }
 
@@ -107,14 +107,14 @@ void	test_memcpy(void *(*origin)(void *d_ptr, const void *s_ptr, size_t num), vo
 		else
 			printf("\x1b[31mtest result is not same origin: %c, ft_func: %c, src: %c \n\x1b[39m", ((char *)dest)[i], ((char *)dest2)[i], ((char *)src2)[i]);
 		i++;
-	} 
+	}
 	printf("\x1b[34mtest is completed\n\n\x1b[39m");
 }
 
 void	test_to_x(int (*origin)(int c),int (*ft_func)(int c), int *testval, char *funcname )
 {
 	int	origin_rt, ft_func_rt;
-	
+
 	printf("%s\n", funcname);
 	while (*testval != 55555)
 	{
