@@ -4,3 +4,4 @@ ft_bzero.c:Zone.Identifier
 *.vscode
 *.out
 *.a
+ft_itoa

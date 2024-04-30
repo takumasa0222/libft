@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 22:49:43 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/04/28 18:46:07 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/01 03:58:03 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int		get_sep_cnt(char const *str, char dlm);
 char	*push_word(char const *str, int size);
-void	multifree(char **mem, int cnt);
+int		validate_words(char **mem, int cnt);
 int		ft_is_not_chr(char const *str, char c);
 
 char	**ft_split(char const *s, char c)
@@ -30,7 +30,7 @@ char	**ft_split(char const *s, char c)
 		return (free(ans), NULL);
 	i = 0;
 	k = 0;
-	if (!s[i])
+	if (!s[i] || (!ft_is_not_chr(&(s[i]), c) && ft_strlen(&(s[i])) == 1))
 		return (ans[k++] = push_word(&(s[i]), 0), ans[k] = NULL, ans);
 	while (s[i])
 	{
@@ -38,6 +38,8 @@ char	**ft_split(char const *s, char c)
 		i = i + size;
 		if (size != 0 && k <= (get_sep_cnt(s, c)))
 			ans[k++] = push_word(&(s[i - size]), size);
+		if (validate_words(ans, k - 1))
+			return (NULL);
 		size = 0;
 		while ((s[i] == c) && s[i])
 			i++;
@@ -71,19 +73,26 @@ int	get_sep_cnt(char const *str, char dlm)
 	return (sp_cnt);
 }
 
-void	multifree(char **mem, int cnt)
+int	validate_words(char **mem, int cnt)
 {
 	int				i;
 
 	i = 0;
 	if (!mem)
-		return ;
-	while (i < cnt)
+		return (1);
+	if (cnt < 0)
+		return (0);
+	if (mem[cnt] == NULL)
 	{
-		free(mem[i]);
-		i++;
+		while (i <= cnt)
+		{
+			free(mem[i]);
+			i++;
+		}
+		free(mem);
+		return (1);
 	}
-	free(mem);
+	return (0);
 }
 
 int	ft_is_not_chr(char const *str, char c)
@@ -98,27 +107,36 @@ int	ft_is_not_chr(char const *str, char c)
 	return (i);
 }
 
-void	test(char **res)
-{
-	//int	i = 0;
-	if (!res)
-	{
-		printf("res is Null\n");
-		printf("\x1b[34mtest is completed\n\x1b[39m");
-		return ;
-	}
+// void	test(char **res)
+// {
+// 	int	i = 0;
+// 	if (!res)
+// 	{
+// 		printf("res is Null\n");
+// 		printf("\x1b[34mtest is completed\n\x1b[39m");
+// 		return ;
+// 	}
+// 	while (res[i] != NULL)
+// 	{
+// 		printf("res[%d]:string %s\n",i, res[i]);
+// 		i++;
+// 	}
+// 	i = 0;
+// 	if (!res)
+// 		return ;
+// 	while (res[i] != NULL)
+// 	{
+// 		free(res[i]);
+// 		i++;
+// 	}
+// 	free(res);
 
-	// while (res[i] != NULL)
-	// {
-	// 	printf("res[%d]:string %s\n",i, res[i]);
-	// 	i++;
-	// }
-	printf("\x1b[34mtest is completed\n\x1b[39m");
-}
+// 	printf("\x1b[34mtest is completed\n\x1b[39m");
+// }
 
-int	main(void)
+// int	main(void)
 {
-	char	str[] = "ab";
+	// char	str[] = "ab";
 	// char	str1[] = "aabcdaa";
 	// char	str2[] = "abcdea";
 	// char	str3[] = "abcdef";
@@ -128,7 +146,7 @@ int	main(void)
 	// char	str7[] = "efhg";
 	// char	*str8 = NULL;
 	// char	str10[] = "aabbaaccaaaa";
-	char	test1 = 'a';
+	// char	test1 = 'a';
 	// char	test2 = '\0';
 
 	// printf("test0 for get_sep_cnt %d\n" ,get_sep_cnt(str, test1));
@@ -143,7 +161,7 @@ int	main(void)
 	// printf("test9 for get_sep_cnt %d\n" ,get_sep_cnt(str4, test2));
 	// printf("test10 for get_sep_cnt %d\n" ,get_sep_cnt(str10, test1));
 
-	test(ft_split(str, test1));
+	// test(ft_split(str, test1));
 	// test(ft_split(str1, test1));
 	// test(ft_split(str2, test1));
 	// test(ft_split(str3, test1));
@@ -154,8 +172,7 @@ int	main(void)
 	// test(ft_split(str8, test1));
 	// test(ft_split(str4, test2));
 	// test(ft_split(str10, test1));
-
-}
+// }
 
 
 char	*push_word(char const *str, int size)
