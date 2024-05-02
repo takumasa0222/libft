@@ -6,7 +6,7 @@
 #    By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 20:36:35 by tamatsuu          #+#    #+#              #
-#    Updated: 2024/05/02 22:56:22 by tamatsuu         ###   ########.fr        #
+#    Updated: 2024/05/03 00:32:54 by tamatsuu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+
+#bonus: 
 
 re: fclean all
 
