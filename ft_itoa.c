@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 02:40:07 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/01 05:04:39 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/01 05:11:12 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,21 +97,21 @@ int	ft_get_digit_size(int n)
 		j++;
 	return (j + dig_size + 1);
 }
-#include <stdio.h>
-void test(int a)
-{
-	char *test = ft_itoa(a);
-	printf("testresult %s\n",test);
-	free(test);
-}
+// #include <stdio.h>
+// void test(int a)
+// {
+// 	char *test = ft_itoa(a);
+// 	printf("testresult %s\n",test);
+// 	free(test);
+// }
 
-int	main(void)
-{
-	test(0);
-	test(10);
-	test(100);
-	test(9999);
-	test(-111110);
-	test(-2147483648);
-	test(2147483647);
-}
+// int	main(void)
+// {
+// 	test(0);
+// 	test(10);
+// 	test(100);
+// 	test(9999);
+// 	test(-111110);
+// 	test(-2147483648);
+// 	test(2147483647);
+// }
