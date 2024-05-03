@@ -6,13 +6,13 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 22:40:02 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/02 23:01:10 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:46:18 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long	cpy_n;
 

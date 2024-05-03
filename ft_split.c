@@ -6,12 +6,11 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 22:49:43 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/01 03:58:03 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:47:57 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int		get_sep_cnt(char const *str, char dlm);
 char	*push_word(char const *str, int size);
@@ -107,6 +106,25 @@ int	ft_is_not_chr(char const *str, char c)
 	return (i);
 }
 
+char	*push_word(char const *str, int size)
+{
+	int		i;
+	char	*ret;
+
+	i = 0;
+	ret = malloc(sizeof(char) * (size + 1));
+	if (!ret)
+		return (NULL);
+	while (i < size && str)
+	{
+		ret[i] = str[i];
+		i++;
+	}
+	ret[i] = '\0';
+	return (ret);
+}
+
+// #include <stdio.h>
 // void	test(char **res)
 // {
 // 	int	i = 0;
@@ -135,7 +153,7 @@ int	ft_is_not_chr(char const *str, char c)
 // }
 
 // int	main(void)
-{
+// {
 	// char	str[] = "ab";
 	// char	str1[] = "aabcdaa";
 	// char	str2[] = "abcdea";
@@ -173,22 +191,3 @@ int	ft_is_not_chr(char const *str, char c)
 	// test(ft_split(str4, test2));
 	// test(ft_split(str10, test1));
 // }
-
-
-char	*push_word(char const *str, int size)
-{
-	int		i;
-	char	*ret;
-
-	i = 0;
-	ret = malloc(sizeof(char) * (size + 1));
-	if (!ret)
-		return (NULL);
-	while (i < size && str)
-	{
-		ret[i] = str[i];
-		i++;
-	}
-	ret[i] = '\0';
-	return (ret);
-}

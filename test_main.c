@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:49:19 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/04/23 23:11:21 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:16:32 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,18 @@ int	main(void)
 	is_x_test(isdigit,ft_isdigit, testval, "ft_isdigit");
 	is_x_test(isalpha, ft_isalpha, testval, "ft_isalpha");
 	is_x_test(isalnum, ft_isalnum, testval, "ft_isalnum");
+	is_x_test(isascii, ft_isascii, testval, "ft_isascii");
+	is_x_test(isprint, ft_isprint, testval, "ft_isprint");
+
+	const char	**teststr;
+	malloc
+	teststr[0] = "Hello";
+	// teststr[1] = "1234";
+	// teststr[2] = "";
+	// teststr[3] = NULL;
+	// teststr[4] = "End";
+	test_strlen(strlen, ft_strlen, teststr, "ft_strlen");
+
 	int		testdata_memset[3];
 	int		testdata_memset2[3];
 

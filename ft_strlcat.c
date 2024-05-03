@@ -6,18 +6,17 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 20:33:51 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/04/22 21:36:35 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:52:02 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;
 	size_t	dst_len;
 	size_t	i;
-	size_t	concat_num;
 
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);

@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 09:35:20 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/03 10:04:52 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:03:36 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list			*prev;
 
 	if (!lst || del)
-		return (NULL);
+		return ;
 	current = *lst;
 	while (current && current->next)
 	{

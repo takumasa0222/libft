@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 21:50:19 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/02 22:29:38 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:02:15 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!ans)
 		return (NULL);
 	i = 0;
-	while (i < (int)size)
+	while (i < (unsigned int)size)
 	{
 		ans[i] = f(i, s[i]);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 22:33:09 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/02 22:57:11 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:51:24 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
-	
+
+	i = 0;
 	if (!s)
 		return ;
 	while (s[i])

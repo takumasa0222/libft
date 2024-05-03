@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:42:50 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/04/23 20:53:50 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:48:17 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret[i] = '\0';
 	return (ret);
 }
-

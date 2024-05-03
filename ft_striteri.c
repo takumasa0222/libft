@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 22:25:51 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/02 22:29:33 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:03:15 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t			size;
 
 	if (!s || !f)
-		return (NULL);
+		return ;
 	size = ft_strlen(s);
 	i = 0;
 	while (s[i])
 	{
-		f(i, s[i]);
+		f(i, &(s[i]));
 		i++;
 	}
 }

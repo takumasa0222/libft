@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 05:45:27 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/04/22 05:54:33 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:56:10 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	if (!s)
 		return (NULL);
-	s_cpy = s;
+	s_cpy = (unsigned char *)s;
 	while (n--)
 	{
 		if (*s_cpy == (unsigned char)c)

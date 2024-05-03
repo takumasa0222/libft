@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 02:40:07 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/01 05:11:12 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:46:05 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@ unsigned int	ft_abs_int(int i);
 
 char	*ft_itoa(int n)
 {
-	// long	cpy_n;
 	char	*ans;
 	int		i;
 	int		size;
 
 	size = ft_get_digit_size(n);
-	ans = (char*)malloc((size + 1) * sizeof (char));
+	ans = (char *)malloc((size + 1) * sizeof (char));
 	if (!ans)
 		return (NULL);
 	i = 0;
@@ -75,6 +74,7 @@ unsigned long	ft_pstv_int_pow(unsigned int x, unsigned int y)
 	}
 	return (ans);
 }
+
 int	ft_get_digit_size(int n)
 {
 	long	i;
@@ -97,6 +97,7 @@ int	ft_get_digit_size(int n)
 		j++;
 	return (j + dig_size + 1);
 }
+
 // #include <stdio.h>
 // void test(int a)
 // {
