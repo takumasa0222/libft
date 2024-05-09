@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 04:21:27 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/03 13:54:15 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 06:45:40 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	*ret;
+
 	if (!s)
 		return (NULL);
 	ret = (char *)s;

@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 10:11:12 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/03 11:16:52 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 06:42:35 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			current->next = (t_list *)malloc(1 * sizeof(t_list));
 			if (!current->next)
 				return (ft_lstclear(&ret, del), NULL);
-			current = current->next;
 			lst = lst->next;
 		}
+		current = current->next;
 	}
 	return (ret);
 }

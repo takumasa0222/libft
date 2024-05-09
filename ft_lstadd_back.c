@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 09:11:25 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/03 10:00:57 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 06:09:55 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	current = *lst;
-	while (current->next)
-		current = current->next;
-	current->next = new;
+	if (*lst)
+	{
+		current = *lst;
+		while (current->next)
+			current = current->next;
+		current->next = new;
+	}
+	else
+		*lst = new;
 }

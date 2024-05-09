@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 22:49:43 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/07 23:38:51 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 05:58:37 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	**ft_split(char const *s, char c)
 		return (free(ans), NULL);
 	i = 0;
 	k = 0;
-	if (!s[i] || (!ft_is_not_chr(&(s[i]), c) && ft_strlen(&(s[i])) == 1))
+	if ((!s[i] && c) || (!ft_is_not_chr(&(s[i]), c) && ft_strlen(&(s[i])) == 1))
 		return (ans[k++] = push_word(&(s[i]), 0), ans[k] = NULL, ans);
 	while (s[i])
 	{
