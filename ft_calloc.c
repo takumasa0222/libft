@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 23:09:47 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/10 20:46:03 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 22:16:59 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t			i;
 
 	i = 0;
-	if ((count && size > SIZE_MAX/count) || (size && count > SIZE_MAX/size))
+	if ((count && size > SIZE_MAX / count) || (size && count > SIZE_MAX / size))
 		return (NULL);
 	arry = (void *)malloc(size * count);
 	if (!arry)
@@ -30,8 +30,7 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (arry);
 }
-#include <stdio.h>
-
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	ft_calloc(1, -5);

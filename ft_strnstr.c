@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:55:16 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/10 19:43:37 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 22:17:48 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *heystack, const char *needle, size_t len)
 	while (i < len && heystack[i])
 	{
 		j = 0;
-		while (heystack[i] == needle[j]&& i < len)
+		while (heystack[i] == needle[j] && i < len)
 		{
 			if (j == ft_strlen(needle) - 1)
 				return ((char *)&(heystack[i - j]));
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *heystack, const char *needle, size_t len)
 			i++;
 			j++;
 		}
-		i =  i - j + 1;
+		i = i - j + 1;
 	}
 	return (NULL);
 }
