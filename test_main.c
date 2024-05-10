@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:49:19 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/03 13:16:32 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 22:59:17 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include "libft.h"
 #include <string.h>
 #include <strings.h>
- #include <stdlib.h>
+#include <stdlib.h>
+#include <assert.h>
 
 
 void	is_x_test(int (*origin)(int c), int (*ft_func)(int c), int *test, char *funcname)
@@ -27,6 +28,7 @@ void	is_x_test(int (*origin)(int c), int (*ft_func)(int c), int *test, char *fun
 		printf("test value is %c\n", *test);
 		origin_res = origin(*test);
 		ft_func_res = ft_func(*test);
+		assert(origin_res == ft_func_res);
 		if (origin_res == ft_func_res)
 			printf("result is same origin: %d, ft_func: %d\n", origin_res, ft_func_res);
 		else
@@ -111,6 +113,25 @@ void	test_memcpy(void *(*origin)(void *d_ptr, const void *s_ptr, size_t num), vo
 	printf("\x1b[34mtest is completed\n\n\x1b[39m");
 }
 
+void	test_memmove()
+{
+	char *src = "abcdef";
+	char *dst = src + 2;
+	char *ftsrc = "abcdef";
+	char *ftdst = src + 2;
+	char *src1 = "abcdef";
+	char *dst1 = src + 2;
+	char *ftsrc1 = "abcdef";
+	char *ftdst1 = src + 2;
+	assert(memmove(src,dst,3)==ftmemmove(ftsrc,ftdst,3));
+	// while ()
+	// {
+
+	// }
+
+}
+
+
 void	test_to_x(int (*origin)(int c),int (*ft_func)(int c), int *testval, char *funcname )
 {
 	int	origin_rt, ft_func_rt;
@@ -130,18 +151,7 @@ void	test_to_x(int (*origin)(int c),int (*ft_func)(int c), int *testval, char *f
 
 }
 
-void	tryal()
-{
-	char testbal[12];
-	int i = 0;
-	memset(&testbal,255,sizeof(testbal));
-	while (i < 12)
-	{
-		printf("testbal value is %d\n",testbal[i]);
-		i++;
-	}
 
-}
 
 int	main(void)
 {
