@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 05:21:42 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/07 02:49:57 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 21:27:25 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	long	i;
+	unsigned long	i;
 
 	i = 0;
 	if (!dst)
 		return (0);
 	if (size != 0)
 	{
-		while (i < (long)size - 1 && src[i])
+		while (i + 1 < size && src[i])
 		{
 			dst[i] = src[i];
 			i++;

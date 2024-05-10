@@ -5,3 +5,4 @@ ft_bzero.c:Zone.Identifier
 *.out
 *.a
 ft_itoa
+*.dSYM

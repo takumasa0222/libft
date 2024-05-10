@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:55:16 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/07 20:05:52 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 19:43:37 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,37 @@
 
 char	*ft_strnstr(const char *heystack, const char *needle, size_t len)
 {
-	int		i;
-	int		j;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
 	if (!*needle)
 		return ((char *)heystack);
-	while (i < (int)len && heystack[i])
+	while (i < len && heystack[i])
 	{
 		j = 0;
-		while (heystack[i] == needle[j])
+		while (heystack[i] == needle[j]&& i < len)
 		{
-			if (j == (int)ft_strlen(needle) - 1)
+			if (j == ft_strlen(needle) - 1)
 				return ((char *)&(heystack[i - j]));
 			if (!heystack[i])
 				return (NULL);
 			i++;
 			j++;
 		}
-		i++;
+		i =  i - j + 1;
 	}
 	return (NULL);
 }
 // #include <stdio.h>
 // int main(void)
 // {
-// 	char *s1 = "see FF your FF return FF now FF";
-// 	char *s2 = "FF";
-// 	size_t max = strlen(s1);
+// 	char s1[30] = "aaabcabcd";
+// 	char s2[10] = "cd";
+// 	size_t max = 8;
 // 	char *i1 = strnstr(s1, s2, max);
 // 	char *i2 = ft_strnstr(s1, s2, max);
 
-// 	printf("strlen |%s|\n",i1);
-// 	printf("ft_strlen |%s|\n",i2);
+// 	printf("strnstr |%s|\n",i1);
+// 	printf("ft_strnstr |%s|\n",i2);
 // }

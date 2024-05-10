@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 22:49:43 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/10 05:58:37 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/10 22:13:27 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ char	**ft_split(char const *s, char c)
 		return (free(ans), NULL);
 	i = 0;
 	k = 0;
-	if ((!s[i] && c) || (!ft_is_not_chr(&(s[i]), c) && ft_strlen(&(s[i])) == 1))
-		return (ans[k++] = push_word(&(s[i]), 0), ans[k] = NULL, ans);
 	while (s[i])
 	{
 		size = ft_is_not_chr(&(s[i]), c);
@@ -43,7 +41,8 @@ char	**ft_split(char const *s, char c)
 		while ((s[i] == c) && s[i])
 			i++;
 	}
-	return (ans[k] = NULL, ans);
+	ans[k] = NULL;
+	return (ans);
 }
 
 int	get_sep_cnt(char const *str, char dlm)
@@ -51,11 +50,11 @@ int	get_sep_cnt(char const *str, char dlm)
 	int	i;
 	int	sp_cnt;
 
-	if (!str)
+	i = 0;
+	if (!str || !str[i])
 		return (0);
 	if (ft_strlen(str) == 1)
 		return (1);
-	i = 0;
 	sp_cnt = 0;
 	while (str[i])
 	{
@@ -178,6 +177,7 @@ char	*push_word(char const *str, int size)
 	// printf("test8 for get_sep_cnt %d\n" ,get_sep_cnt(str8, test1));
 	// printf("test9 for get_sep_cnt %d\n" ,get_sep_cnt(str4, test2));
 	// printf("test10 for get_sep_cnt %d\n" ,get_sep_cnt(str10, test1));
+	// printf("test11 for get_sep_cnt %d\n" ,get_sep_cnt("", ' '));
 
 	// test(ft_split(str, test1));
 	// test(ft_split(str1, test1));
@@ -190,4 +190,5 @@ char	*push_word(char const *str, int size)
 	// test(ft_split(str8, test1));
 	// test(ft_split(str4, test2));
 	// test(ft_split(str10, test1));
+// 	test(ft_split("", ' '));
 // }
