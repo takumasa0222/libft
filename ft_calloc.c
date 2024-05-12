@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 23:09:47 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/10 22:16:59 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:23:31 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (arry);
 }
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	ft_calloc(1, -5);
-// 	printf("intmin %lu\n", (size_t)-2147483648 );
-// 	printf("intmin %lu\n", (size_t)-5 );
-// }

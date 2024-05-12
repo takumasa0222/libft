@@ -6,12 +6,11 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:55:18 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/10 06:47:42 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:22:06 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_char_find(char const *set, int s);
 

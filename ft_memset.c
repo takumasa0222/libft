@@ -6,11 +6,11 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 05:03:16 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/04/22 05:59:18 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:21:17 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *ptr, int value, size_t num)
 {

@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:55:16 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/10 22:17:48 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/12 14:49:17 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,3 @@ char	*ft_strnstr(const char *heystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char s1[30] = "aaabcabcd";
-// 	char s2[10] = "cd";
-// 	size_t max = 8;
-// 	char *i1 = strnstr(s1, s2, max);
-// 	char *i2 = ft_strnstr(s1, s2, max);
-
-// 	printf("strnstr |%s|\n",i1);
-// 	printf("ft_strnstr |%s|\n",i2);
-// }
