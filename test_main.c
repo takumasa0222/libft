@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:49:19 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/12 19:56:02 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/17 17:01:52 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -512,6 +512,11 @@ void	test_atoi()
 	char s12[30] = " -123456789";
 	char s13[30] = "\r-1234";
 	char s14[30] = "\t\v\f\r -123456789";
+	char s15[30] = "9223372036854775808";
+	char s16[30] = "-9223372036854775809";
+	char s17[30] = "18446744073709551616";
+	char s18[30] = "18446744073709551614";
+	char s19[30] = "-9223372036854775807";
 	if ((atoi(s1)==ft_atoi(s1)))
 		printf("result is same\n");
 	else
@@ -568,6 +573,26 @@ void	test_atoi()
 		printf("result is same\n");
 	else
 		printf("\x1b[31mresult is different original: %d,ft_func: %d\n",atoi(s14),ft_atoi(s14));
+	if ((atoi(s15)==ft_atoi(s15)))
+		printf("result is same\n");
+	else
+		printf("\x1b[31mresult is different original: %d,ft_func: %d\n",atoi(s15),ft_atoi(s15));
+	if ((atoi(s16)==ft_atoi(s16)))
+		printf("result is same\n");
+	else
+		printf("\x1b[31mresult is different original: %d,ft_func: %d\n",atoi(s16),ft_atoi(s16));
+	if ((atoi(s17)==ft_atoi(s17)))
+		printf("result is same\n");
+	else
+		printf("\x1b[31mresult is different original: %d,ft_func: %d\n",atoi(s17),ft_atoi(s17));
+	if ((atoi(s18)==ft_atoi(s18)))
+		printf("result is same\n");
+	else
+		printf("\x1b[31mresult is different original: %d,ft_func: %d\n",atoi(s18),ft_atoi(s18));
+	if ((atoi(s19)==ft_atoi(s19)))
+		printf("result is same\n");
+	else
+		printf("\x1b[31mresult is different original: %d,ft_func: %d\n",atoi(s19),ft_atoi(s19));
 	printf("\x1b[34mtest is completed\n\n\x1b[39m");
 }
 
