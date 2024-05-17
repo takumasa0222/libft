@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 22:10:00 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/17 17:06:53 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/17 20:27:33 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*str) && *str)
 	{
-		if (overflowcheck(minus_flag, result, *str)== 1)
+		if (overflowcheck(minus_flag, result, *str) == 1)
 			return ((int)LONG_MAX);
-		if (overflowcheck(minus_flag, result, *str)== -1)
+		if (overflowcheck(minus_flag, result, *str) == -1)
 			return ((int)LONG_MIN);
 		result = result * 10 + (long)(*str - 48);
 		str++;
