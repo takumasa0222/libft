@@ -6,7 +6,7 @@
 #    By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 20:36:35 by tamatsuu          #+#    #+#              #
-#    Updated: 2024/05/10 05:58:56 by tamatsuu         ###   ########.fr        #
+#    Updated: 2024/05/19 20:50:43 by tamatsuu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJS		= $(SRCS:%.c=%.o)
 ifdef WITH_BONUS
 OBJS		+= $(BOBJS)
 endif
-BONUS		=  ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+BONUS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 ft_lstclear.c ft_lstiter.c ft_lstmap.c
 BOBJS		= $(BONUS:%.c=%.o)
 INCDIR		= -I
@@ -54,4 +54,4 @@ so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
 	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BOBJS)
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
