@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 22:40:02 by tamatsuu          #+#    #+#             */
-/*   Updated: 2024/05/03 12:46:18 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2024/05/19 22:18:23 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	cpy_n;
+	long long	cpy_n;
 
 	cpy_n = n;
 	if (cpy_n < 0)
